@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://192.168.1.5/svn/fengjitech/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/code/chrome-extension/branches" />
+                  <option value="https://192.168.1.5/svn/fengjitech/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/code/chrome-extension/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://192.168.1.5/svn/fengjitech/浏览器插件/code/chrome-extension/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

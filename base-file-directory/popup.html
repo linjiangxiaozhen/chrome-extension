@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="easyui/bootstrap/easyui.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="easyui/jquery.easyui.min.js"></script>
+    <script src="layui/layui.all.js"></script>
+    <link rel="stylesheet" href="layui/css/layui.css" type="text/css"/>
+    <script src='popup.js'></script>
+    <script src='js/crypto-js.min.js'></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<p><a href="http://www.baidu.com" id="test" onclick="tres()" class="aaa ddd ccc ttt">地址跳转</a></p>
+<textarea rows="6" cols="200" id="original_data"></textarea>
+<br/>
+<br/>
+<br/>
+<button style="width:200px;height: 50px" onclick="ccc()">转换</button>
+<br/>
+<br/>
+<br/>
+<textarea rows="20" cols="200" id="show_block"></textarea>
+
+    <a  class="easyui-linkbutton" onclick="openDialog()">Add11111111</a>
+    <a  class="easyui-linkbutton">Remove22222</a>
+    <a  class="easyui-linkbutton">Save3333333</a>
+    <a  class="easyui-linkbutton">Cut44444444</a>
+    <a  class="easyui-linkbutton">Text Button</a>
+<form class="layui-form" action="">
+<div class="layui-form-item">
+    <label class="layui-form-label">开关-默认关</label>
+    <div class="layui-input-block">
+        <input type="checkbox" name="close" lay-skin="switch" lay-text="ON|OFF">
+    </div>
+</div>
+</form>
+
+</body>
+<script type="text/javascript">
+    var aa = {t: 12, s: this.t + "222"}
+    alert("fffdddsssfgggtttuuuu".replace("ggg", "111").replace("uuu", "222"));
+    // var dialogDom = $("<div></div>");
+    // function openDialog() {
+    //     var targetDom = $("<div></div>"),
+    //         dialog = targetDom.dialog({
+    //             title: 'My Dialog',
+    //             width: "90%",
+    //             height: "80%",
+    //             closed: false,
+    //             cache: false,
+    //             modal: true,
+    //             content: "<button onclick='openDialog()'>111</button>",
+    //             onClose: function () {
+    //                 $(this).dialog("destroy");
+    //             },
+    //             fit: true
+    //         });
+    //     targetDom.parent().parent().find(".window-mask").on("click", function (event) {
+    //         targetDom.dialog("close");
+    //     })
+    // }
+
+    // for (var i=0;i<20;i++) {
+    //     var dom = $("<div>" + i + "</div>");
+    //     dom.on("click", function () {
+    //         alert(i);
+    //     });
+    //     $("body").append(dom);
+    // }
+    function ccc() {
+        $("#show_block").text(decrypt($("#original_data").val()));
+    }
+    // var obj1 = (function () {
+    //     function aa() {
+    //
+    //     }
+    //     return {
+    //         test: function (options) {
+    //             alert(options.fn);
+    //         }
+    //     }
+    // })();
+    //
+    // var obj2 = (function () {
+    //     function aa1() {
+    //
+    //     }
+    //     return {
+    //         aa: function () {
+    //             var options = {};
+    //             options.fn = aa1;
+    //             obj1.test(options);
+    //         }
+    //     }
+    // })();
+    // obj2.aa();
+
+    function caculateFormula(value) {
+        return -3 * Math.pow(10, -12) * Math.pow(value, 3) + 3 * Math.pow(10, -5) * Math.pow(value, 2) +
+            1.715 * value;
+    }
+    $("#test").click(() => {
+        alert($("[class*='aaa']").text());
+    })
+
+    function tres() {
+        console.log("bbbb");
+    }
+    function ttt(J, K) {
+        var L = Math.pow(10, K), M = parseFloat(J) * L + 1e-10;
+        return Math.round(M) / L
+    }
+    // aes解密
+    function decrypt(word) {
+        var key = CryptoJS.enc.Utf8.parse("w28Cz694s63kBYk4");
+        var iv = CryptoJS.enc.Utf8.parse("4kYBk36s496zC82w");
+        var encryptedHexStr = CryptoJS.enc.Hex.parse(word);
+        var srcs = CryptoJS.enc.Base64.stringify(encryptedHexStr);
+        var decrypt = CryptoJS.AES.decrypt(srcs, key, {
+            iv: iv,
+            padding: CryptoJS.pad.Pkcs7
+        });
+        var decryptedStr = decrypt.toString(CryptoJS.enc.Utf8);
+        return decryptedStr.toString();
+    }
+    // alert(decodeURIComponent("/mc/ci/item/monitor/list.json%3FcateId%3D124242008%26dateRange%3D2020-06-11%7C2020-06-11%26dateType%3Dday%26device%3D0%26indexCode%3DcateRankId%2CtradeIndex%2CuvIndex%26order%3Ddesc%26orderBy%3DtradeIndex%26page%3D1%26pageSize%3D10%26sellerType%3D-1"));
+    // console.log(decrypt("19d63d420e9749de571f430a311e91aaeecc4f9b059fe94be0118e80ce56626f8d3b4e65258ca56f6749c72c7e6058af2feda10733b1ad76159ae95832fb88705eabf85c70fac4e639add5e8c2b0e7e78ebc10bcd0a02d113278fc34ad0f918c04517e7d3ec7a8e250b362da47be6cb9b97001ef25a21095da4920ccfdf6df482359627a9e34b49d8e63a7369fbd63e06584777aa751ddd0115c17957d6e4c4d788fabb91fe2a37db05f98c434765c7af535e20320f46ec489f743550557c6a29ecf5f2aaff2806bcaa6315802dffa214ef183e6d83f08c94b3876409fcd01914d50bf3219c30e6b47e66d8accbfb732"));
+    function get_hs_page(cur_page, total_page) {
+        var result = "";
+        for(var i = 1; i <= total_page; i++) {
+            if(i == 2 && cur_page - 3 > 1) {
+                i = cur_page - 3;
+            }else if(i == cur_page + 3 && cur_page + 3 < total_page) {
+                i = total_page - 1;
+            }else{
+                if(i == cur_page){
+                    result += "<span style='background-color:#e7e7e7;width:40px;display: inline-block'>"+i+"</span>";
+                }else{
+                    result += "<span style='width:40px;display: inline-block'>"+i+"</span>";
+                }
+
+            }
+        }
+        return result;
+    }
+    function test(curr, maxNo) {
+        var array =[1], start, end;
+        if (maxNo <= 5) {
+            for (var i = 2; i <= maxNo; i++) {
+                array.push(i);
+            }
+        } else {
+            if (curr - 3 > 1) {
+                start = curr - 3;
+            } else {
+                start = 2;
+            }
+            if (curr + 3 < maxNo) {
+                end = curr + 3;
+            } else {
+                end = maxNo - 1;
+            }
+            for (var i = start; i <= end; i++) {
+                array.push(i);
+            }
+            array.push(maxNo);
+        }
+    }
+    for (var i = 1; i<= 5; i++) {
+        test(i, 2);
+    }
+</script>
+</html>

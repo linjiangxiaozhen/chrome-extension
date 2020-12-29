@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body class="layui-layout-body">
+
+<script src="layui/layui.js"></script>
+<script>
+    thisTable = function () {
+        var that = this
+            , options = that.config
+            , id = options.id || options.index;
+
+        if (id) {
+            thisTable.that[id] = that; //记录当前实例对象
+            thisTable.config[id] = options; //记录当前实例配置项
+        }
+
+        return {
+            config: options
+            , reload: function (options) {
+                that.reload.call(that, options);
+            }
+            , setColsWidth: function () {
+                that.setColsWidth.call(that);
+            }
+            , resize: function () { //重置表格尺寸/结构
+                that.resize.call(that);
+            }
+        }
+    }
+    //构造器
+    Class = function (options) {
+        var that = this;
+        that.index = ++table.index;
+        that.config = $.extend({}, that.config, table.config, options);
+        that.render();
+    };
+</script>
+</body>
+</html>

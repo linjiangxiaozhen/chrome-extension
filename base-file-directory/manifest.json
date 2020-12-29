@@ -1,0 +1,70 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    // 清单文件的版本，这个必须写，而且必须是2
+    "manifest_version": 2,
+    // 插件的名称
+    "name": "峰极插件测试",
+    // 插件的版本
+    "version": "1.0.0",
+    // 作者
+    "author" :"yefei.xu",
+    // 插件描述
+    "description": "生意参谋指数转换，数据分析，数据导出；直通车数据优化；淘宝辅助；",
+    // 图标，一般偷懒全部用一个尺寸的也没问题
+    "icons": {
+        "16": "images/icon.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon.png"
+        },
+        "default_title": "峰极插件测试",
+        "default_popup": "popup.html"
+    },
+    // 会一直常驻的后台JS或后台页面
+    "background": {
+        // 2种指定方式，如果指定JS，那么会自动生成一个背景页
+        // "page": "background.html"
+        "scripts": ["js/background.js"]
+    },
+    // 当某些特定页面打开才显示的图标
+    /*"page_action":
+    {
+        "default_icon": "img/icon.png",
+        "default_title": "我是pageAction",
+        "default_popup": "popup.html"
+    },*/
+    "homepage_url": "https://www.amingtool.com",
+    // 需要直接注入页面的JS，环境是隔离的，只能操作DOM，但是DOM是不可以调用次类js的函数的，同时
+    // 此类js也不可能访问页面内的js以及通过添加script节点注入的js
+	"content_scripts": [
+        {
+//            "matches": ["<all_urls>"],
+            // 多个js按照顺序注入
+            "matches": [
+                "*://*.taobao.com/*",
+                "*://*.tmall.com/*",
+                "*://*.tmall.hk/*"
+            ],
+            "js": ["js/content-script.js"],
+            "css": [],
+            "all_frames": true,
+            // 代码注入的时间，可选值： "document_start", "document_end", or "document_idle"，最后一个表示页面空闲时，默认document_idle
+            "run_at": "document_start"
+        }
+    ],
+    // 权限申请
+	"permissions": [
+        "activeTab",
+        "cookies",
+        "webRequest",
+        "webRequestBlocking",
+        "storage",
+        "tabs", // 标签
+        "notifications", // 通知
+        "http://*/*", // 可以通过executeScript或者insertCSS访问的网站
+        "https://*/*" // 可以通过executeScript或者insertCSS访问的网站
+    ],
+    // 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的
+    "web_accessible_resources": [ "css/*", "js/*", "images/*", "layui/*", "easyui/*"]
+}

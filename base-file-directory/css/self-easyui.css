@@ -1,0 +1,244 @@
+.layui-table-tool-temp .layui-btn:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+}
+
+.layui-table-tool-temp .layui-table-tool-panel {
+    top: 40px;
+}
+
+.layui-layer ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.index_cards_container .index_item_card {
+    display: inline-block;
+    height: 70px;
+    text-align: left;
+    padding: 2px 4px;
+    position: relative;
+}
+
+.index_item_card_inner {
+    border: 2px dashed #409eff;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.index_item_card_inner.active {
+    border: 2px solid #409eff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.index_item_card_inner div {
+    padding: 0px 10px;
+}
+
+.index_item_card_inner span.index_value {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.echarts_main {
+    width: 96%;
+    height: 300px;
+    margin: 0px auto;
+}
+
+.tools_buttons_inject_container {
+    display: inline-block;
+    /*float: right;*/
+    /*background: #D2D2D2;*/
+    padding: 0px 10px;
+}
+
+/*.layui-table-cell {*/
+/*    height: auto !important;*/
+/*    white-space: normal;*/
+/*}*/
+
+.font_light_color {
+    color: #999;
+    font-size: 12px;
+}
+
+.font_large_20 {
+    font-size: 20px;
+}
+
+.font_large_16 {
+    font-size: 16px;
+}
+
+.font_red_color {
+    color: red;
+    font-size: 12px;
+}
+
+.font_green_color {
+    color: green;
+    font-size: 12px;
+}
+
+.tools_defalut_toolbar_btn_transform {
+    width: auto;
+}
+
+.tools_dialog_content_container .layui-laypage {
+    margin: 0px;
+    padding: 0px 20px;
+}
+
+.tools_dialog_content_container .layui-laypage-count {
+    font-size: 14px;
+}
+
+.self_define_page_bar {
+    padding: 2px 20px;
+}
+
+.self_define_page_bar span {
+    padding: 0px 15px;
+    color: #999;
+    font-size: 12px;
+}
+
+.layui-table-cell {
+    height: auto;
+}
+
+
+
+.layui-table-cell li {
+    line-height: 24px;
+}
+
+.layui-table-cell img {
+    width: 34px;
+    height: 34px;
+    margin-right: 4px;
+}
+
+.layui-table-cell ul {
+    display: inline-block;
+}
+
+.card_item_wrapper {
+    display: inline-block;
+    padding: 2px 4px;
+    /*border: 2px dashed #409eff;*/
+    /*border: 1px solid #e1e1e1;*/
+    /*border-radius: 5px;*/
+    cursor: pointer;
+}
+
+.index_cards_container {
+    padding: 2px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.card_item_body {
+    border: 2px solid #e1e1e1;
+    border-radius: 5px;
+    padding: 3px 10px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.card_item_body li {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: Helvetica Neue, Tahoma, Helvetica, Arial, Microsoft YaHei;
+    white-space: nowrap;
+    width: 98%;
+}
+
+.card_item_body li span{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: Helvetica Neue, Tahoma, Helvetica, Arial, Microsoft YaHei;
+    white-space: nowrap;
+}
+
+.card_item_body.dash_border {
+    border: 2px dashed #e1e1e1;
+}
+
+.card_item_body.active {
+    border: 2px solid #409eff;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.card_item_body .index-item-check-icon{
+    color: #D2D2D2;
+}
+
+.card_item_body.active .index-item-check-icon{
+    color: #0088fe;
+}
+
+.table_display_model_select {
+    background: #FFFFFF;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px #C9C9C9 solid;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+}
+
+.table_display_model_select span {
+    display: inline-block;
+    height: 100%;
+    padding: 0px 16px;
+    cursor: pointer;
+}
+
+.table_display_model_select span:first-child {
+    border-right: 1px #C9C9C9 solid;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.table_display_model_select span:nth-child(2) {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.echarts_tool_tip_table td {
+    padding: 2px 5px;
+    font-size: 13px;
+    font-family: Helvetica Neue, Tahoma, Helvetica, Arial, Microsoft YaHei;
+}
+
+/* easyui.css重写*/
+.l-btn {
+    -moz-border-radius: 2px 2px 2px 2px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    margin-right: 7px;
+}
+.l-btn:hover {
+    background: none;
+    color: #00438a;
+    border: 1px solid #ddd;
+    filter: none;
+}
+
+.window-mask {
+    filter: alpha(opacity=30);
+    opacity: 0.30;
+}
+
